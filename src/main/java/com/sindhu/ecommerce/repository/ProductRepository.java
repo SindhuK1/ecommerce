@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ProductRepository  extends JpaRepository<Product, Long>{
@@ -17,6 +18,10 @@ public interface ProductRepository  extends JpaRepository<Product, Long>{
      Product save(Product product);
 
     //defenitely has id      may not have id
+
+    Optional<Product> findById(Long id);
+
+    List<Product> getProductByCategoryIn(List<Category> categories);
 
     Integer countProductByPriceLessThan(Double value);
 
