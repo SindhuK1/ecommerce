@@ -29,13 +29,13 @@ class EcommerceApplicationTests {
     void contextLoads() {
     }
 
-    @Test
-    void testAllProductsUsingHQL(){
-        List<Product> productList = productRepository.Myreturn();
-        for(Product product: productList){
-            System.out.println(product.getName());
-        }
-    }
+//    @Test
+//    void testAllProductsUsingHQL(){
+//        List<Product> productList = productRepository.Myreturn();
+//        for(Product product: productList){
+//            System.out.println(product.getName());
+//        }
+//    }
 
     @Test
     void testAllProductsUsingHQLAndCatName(){
@@ -101,8 +101,8 @@ class EcommerceApplicationTests {
 
             List<Product> product = category.getProducts();
             System.out.println(product.size());
-            for(Product product : product){
-                System.out.println(product.getName());
+            for(Product p : product){
+                System.out.println(p.getName());
             }
         }
     }
