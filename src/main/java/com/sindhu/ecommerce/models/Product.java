@@ -19,6 +19,7 @@ public class Product extends BaseModel {
    private Double price;
    private String imageUrl;
    private Double discount;
+   private String t1;
 
    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
    private Category category;
